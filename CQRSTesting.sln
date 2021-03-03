@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRSTesting", "CQRSTesting\CQRSTesting.csproj", "{0AA9016D-BD0E-4AF6-997A-94A0ECEED03F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AA9016D-BD0E-4AF6-997A-94A0ECEED03F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA9016D-BD0E-4AF6-997A-94A0ECEED03F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA9016D-BD0E-4AF6-997A-94A0ECEED03F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA9016D-BD0E-4AF6-997A-94A0ECEED03F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A2B0C71-0A05-4B30-BB44-E9526E9DC34E}
+	EndGlobalSection
+EndGlobal
