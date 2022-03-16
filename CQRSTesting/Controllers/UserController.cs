@@ -5,6 +5,8 @@ using MediatR;
 
 namespace CQRSTesting.Controllers
 {
+    using ApplicationServices.Commands;
+
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
@@ -19,6 +21,10 @@ namespace CQRSTesting.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
+            // This command should be ignored
+            await _mediator.Send(new IgnoreMeCommand(), HttpContext.RequestAborted);
+
+
             var user = await _mediator.Send(new GetUserByIdQuery(id), HttpContext.RequestAborted);
             return Ok(user);
         }

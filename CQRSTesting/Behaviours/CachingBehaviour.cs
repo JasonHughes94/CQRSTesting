@@ -20,6 +20,7 @@ namespace CQRSTesting.Behaviours
 
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
+            //Pre logic
             var requestName = request.GetType();
             _logger.LogInformation("{Request} is configured for caching", requestName);
 
@@ -29,9 +30,11 @@ namespace CQRSTesting.Behaviours
                 return response;
             }
 
+            //Execute the Command/Query
             _logger.LogInformation("{Request} cache key: {Key} is not in the cache, executing request.", requestName, request.CacheKey);
             response = await next();
 
+            //Post logic
             _cache.Set(request.CacheKey, response);
 
             return response;

@@ -21,6 +21,7 @@ namespace CQRSTesting.Behaviours
             _logger.LogInformation("{Request} is starting.", request.GetType().Name);
             var timer = Stopwatch.StartNew();
 
+            //Execute the command/query
             var response = await next();
             timer.Stop();
 

@@ -12,6 +12,6 @@ namespace CQRSTesting.ApplicationServices.Queries
         }
 
         public int Id { get; private set; }
-        public string CacheKey => $"GetUserByUd-{Id}";
+        public string CacheKey => $"GetUserById-{Id}";
     }
 }
